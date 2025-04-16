@@ -5,22 +5,22 @@ import type { LinkItem } from "../components/link-tree";
 const links: LinkItem[] = [
   {
     title: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/noel12sirrom",
     icon: "/icons/github.svg"
   },
   {
     title: "Twitter",
-    url: "https://twitter.com/yourusername",
-    icon: "/icons/twitter.svg"
+    url: "https://x.com/Noel20962547",
+    icon: "/icons/x.svg"
   },
   {
     title: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://linkedin.com/in/leon-morris",
     icon: "/icons/linkedin.svg"
   },
   {
     title: "Portfolio",
-    url: "https://yourportfolio.com",
+    url: "https://github.com/noel12sirrom",
     icon: "/icons/globe.svg"
   },
   {
@@ -36,9 +36,9 @@ export default function Home() {
       <StarsBackground />
       <div className="relative z-10 w-full max-w-2xl mx-auto">
         <LinkTree 
-          name="Your Name"
-          avatar="/avatar.jpg"
-          bio="Full Stack Developer | Open Source Enthusiast | Tech Blogger"
+          name="Leon Morris"
+          avatar="/avatar.png"
+          bio="Full Stack Developer | Open Source Enthusiast | Data Enginner Intern at Intgellibus "
           links={links}
         />
       </div>
