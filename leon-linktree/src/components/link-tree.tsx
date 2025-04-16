@@ -11,7 +11,7 @@ export interface LinkItem {
 interface LinkTreeProps {
   name: string;
   avatar?: string;
-  bio?: string;
+  bio?: React.ReactNode;
   links: LinkItem[];
 }
 
@@ -21,18 +21,21 @@ export function LinkTree({ name, avatar, bio, links }: LinkTreeProps) {
       {/* Profile Section */}
       <div className="flex flex-col items-center gap-3">
         {avatar && (
-          <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary">
-            <Image
-              src={avatar}
-              alt={name}
-              width={96}
-              height={96}
-              className="object-cover w-full h-full"
-            />
-          </div>
+           <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary ring-2 ring-purple-500/50 shadow-lg">
+           <Image
+             src={avatar}
+             alt={name}
+             width={96}
+             height={96}
+             className="object-cover w-full h-full"
+             priority
+           />
+         </div>
         )}
-        <h1 className="text-2xl font-bold text-center">{name}</h1>
-        {bio && <p className="text-muted-foreground text-center">{bio}</p>}
+        <h1 className="text-2xl font-bold text-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+          {name}
+        </h1>
+        {bio && <p className="text-center font-thin text-md text-white ">{bio}</p>}
       </div>
 
       {/* Links Section */}

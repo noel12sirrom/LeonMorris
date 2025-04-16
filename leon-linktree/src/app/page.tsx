@@ -9,7 +9,7 @@ const links: LinkItem[] = [
     icon: "/icons/github.svg"
   },
   {
-    title: "Twitter",
+    title: "X",
     url: "https://x.com/Noel20962547",
     icon: "/icons/x.svg"
   },
@@ -24,9 +24,9 @@ const links: LinkItem[] = [
     icon: "/icons/globe.svg"
   },
   {
-    title: "Blog",
-    url: "https://yourblog.com",
-    icon: "/icons/pencil.svg"
+    title: "Gmail",
+    url: "mailto:leon.morris@intellibus.com",
+    icon: "/icons/intellibus-blue.jpeg"
   }
 ];
 
@@ -38,7 +38,16 @@ export default function Home() {
         <LinkTree 
           name="Leon Morris"
           avatar="/avatar.png"
-          bio="Full Stack Developer | Open Source Enthusiast | Data Enginner Intern at Intgellibus "
+          bio={
+            <>
+            <span className="font-semibold text-md">Data Engineer</span> Intern -
+            <img 
+              src="/icons/intellibus.svg" 
+              alt="Intellibus" 
+              className="inline-block w-25 h-5 align-text-bottom ml-2" 
+            />
+          </>
+          }
           links={links}
         />
       </div>
